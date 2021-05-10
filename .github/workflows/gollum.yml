@@ -11,5 +11,7 @@ jobs:
         run: |
           git clone https://github.com/${GITHUB_REPOSITORY}.wiki.git wiki
           cd wiki
-          git remote add repo https://github.com/${GITHUB_REPOSITORY}.git
+          git remote add repo https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git push repo master:wiki
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
