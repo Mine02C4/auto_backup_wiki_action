@@ -1,0 +1,14 @@
+name: Wiki update
+
+on:
+  gollum
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: copy
+        run: |
+          git clone https://github.com/${GITHUB_REPOSITORY}.wiki.git
+          git remote add repo https://github.com/${GITHUB_REPOSITORY}.git
+          git push repo master:wiki
