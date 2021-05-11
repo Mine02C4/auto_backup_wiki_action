@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Backup wiki
-        uses: Mine02C4/auto_backup_wiki_action@main
+        uses: Mine02C4/auto_backup_wiki_action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: wiki
