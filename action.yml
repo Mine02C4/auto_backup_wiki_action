@@ -9,10 +9,13 @@ inputs:
   target_branch:
     description: 
     required: true
+  github_token:
+    description:
+    required: true
 
 runs:
   using: docker
   image: Dockerfile
   env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    GITHUB_TOKEN: ${{ inputs.github_token }}
     TARGET_BRANCH: ${{ inputs.target_branch }}
