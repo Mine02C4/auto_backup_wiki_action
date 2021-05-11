@@ -2,7 +2,7 @@ name: Auto backup GitHub Wiki to Code
 author: Naoya Niwa
 description: This action automatically backs up the contents of the GitHub Wiki to a specified branch.
 branding:
-  icon: github
+  icon: refresh-cw
   color: white
 
 inputs:
